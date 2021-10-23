@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Kaushan+Script&family=Nunito:wght@200;300;400;600;700&display=swap");
+$crimson: #ee6263;
+* {
+  font-family: "Exo 2", sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  position: fixed;
+  flex-flow: row-reverse;
+  z-index: 1;
+  .left {
+    display: flex;
+    position: relative;
+    #search {
+      padding: 0 1.5rem;
+      outline: none;
+      border: none;
+      border-radius: 5rem;
+      height: 4rem;
+      width: 4rem;
+      background-color: $crimson;
+      position: absolute;
+      right: 13.4rem;
+      color: #fff;
+      &:hover,
+      &:focus {
+        width: 25rem;
+        &::placeholder {
+          color: #333;
+        }
+      }
+    }
+    label {
+      margin: 1rem;
+      z-index: 1;
+      color: #fff;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+    .logo {
+      margin: 0 3rem;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 2rem;
+          color: #333;
+          margin: 0 2rem;
+          &:hover {
+            color: $crimson;
+          }
+        }
+      }
+    }
+  }
+
+  .fa-bars {
+    font-size: 3.5rem;
+    color: $crimson;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem;
+  position: relative;
+
+  .content {
+    width: 40vw;
+    margin-left: -5rem;
+    color: #333;
+
+    h1 {
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+      margin: 1.4rem 0;
+      color: $crimson;
+    }
+    p {
+      font-size: 1.7rem;
+      padding: 1rem 0;
+      border-bottom: 0.2rem solid #333;
+      border-top: 0.2rem solid #333;
+    }
+    a {
+      button {
+        outline: none;
+        border: none;
+        height: 4rem;
+        width: 14rem;
+        border-radius: 5rem;
+        background-color: $crimson;
+        color: #fff;
+        cursor: pointer;
+        margin: 2rem 0;
+        &:hover {
+          background: #333;
+        }
+      }
+      .btn2 {
+        margin-left: 1.5rem;
+      }
+    }
+    .icons {
+      position: absolute;
+      bottom: 4rem;
+
+      a {
+        font-size: 2.4rem;
+        text-decoration: none;
+        color: #333;
+        margin: 0 1rem;
+        &:hover {
+          color: $crimson;
+        }
+      }
+    }
+  }
+  .image {
+    margin-top: 5rem;
+    margin-right: 5rem;
+    img {
+      width: 30vw;
+    }
+  }
+}
+
+.fa-times {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    .fa-bars {
+      display: block;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100vh;
+      width: 100vw;
+      background-color: #fff;
+
+      ul {
+        height: 100%;
+        flex-flow: column;
+        justify-content: center;
+
+        li {
+          margin: 2rem 0;
+          a {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    text-align: center;
+
+    .content {
+      width: 100%;
+      margin: 0;
+
+      .icons {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .image {
+      display: none;
+    }
+  }
+  .active {
+    left: 0%;
+  }
+}
+@media (max-width: 450px) {
+  header {
+    .left {
+      .logo {
+        margin: 0 0.5rem;
+      }
+      #search {
+        right: 0.5rem;
+        top: 5.5rem;
+
+        &:hover,
+        &:focus {
+          width: 30rem;
+        }
+      }
+      label {
+        position: absolute;
+        right: 0.5rem;
+        top: 5.5rem;
+      }
+    }
+  }
+}

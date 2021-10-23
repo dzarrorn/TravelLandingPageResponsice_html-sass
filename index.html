@@ -9,9 +9,65 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Travel</title>
   </head>
   <body>
+    <header>
+      <div class="left">
+        <input type="search" placeholder="search" id="search" />
+        <label for="search" class="fas fa-search"></label>
+
+        <div class="logo">
+          <h1>logo</h1>
+        </div>
+      </div>
+
+      <div class="fas fa-bars"></div>
+
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">booking</a></li>
+          <li><a href="#">maps</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <div class="content">
+        <h1>book your journey now!</h1>
+        <h3>explore the world with us</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          impedit aspernatur dolore. Omnis itaque perspiciatis perferendis
+          possimus, consequuntur consectetur velit?
+        </p>
+        <a href="#"><button>book now</button></a>
+        <a href="#"><button class="btn2">explore more</button></a>
+
+        <div class="icons">
+          <a href="#" class="fab fa-facebook"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-pinterest"></a>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="images/image.png" alt="" />
+      </div>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".fa-bars").click(function () {
+          $("nav").toggleClass("active");
+          $(this).toggleClass("fa-times");
+        });
+      });
+    </script>
   </body>
 </html>
